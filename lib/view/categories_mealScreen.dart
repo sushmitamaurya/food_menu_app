@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'dummy_data.dart';
+import 'package:food_menu/widgets/meal_item.dart';
+import '../dummy_data.dart';
 
 class CategoriesMeal extends StatelessWidget {
   static const routeName = '/category-meals';
-  // final String categoryId;
-  // final String categoryTitle;
-
-  // const CategoriesMeal({required this.categoryId, required this.categoryTitle});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +21,14 @@ class CategoriesMeal extends StatelessWidget {
         appBar: AppBar(title: Text(categoryTitle!)),
         body: ListView.builder(
           itemBuilder: (ctx, index) {
-            return Text(categoriesMeals[index].title!);
+            return MealItem(
+              id: categoriesMeals[index].id,
+              title: categoriesMeals[index].title,
+              imageUrl: categoriesMeals[index].imageUrl,
+              duration: categoriesMeals[index].duration,
+              affordability: categoriesMeals[index].affordability,
+              complexity: categoriesMeals[index].complexity,
+            );
           },
           itemCount: categoriesMeals.length,
         ));
