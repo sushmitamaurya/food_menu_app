@@ -5,7 +5,7 @@ class CategoriesItem extends StatelessWidget {
   final String? id;
   final String? title;
   final Color? color;
-  CategoriesItem({this.id, this.title, this.color});
+  const CategoriesItem({super.key, this.id, this.title, this.color});
   void selectCategory(BuildContext ctx) {
     Navigator.of(ctx).pushNamed(CategoriesMeal.routeName,
         arguments: {'id': id, 'title': title});

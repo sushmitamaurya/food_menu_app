@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 enum Complexity { Simple, Challenging, Hard }
 
 enum Affordability {
@@ -11,8 +13,8 @@ class Meal {
   final List<String> categories;
   final String? title;
   final String? imageUrl;
-  final List<String?> ingredients;
-  final List<String?> steps;
+  final List<String> ingredients;
+  final List<String> steps;
   final int? duration;
   final Complexity? complexity;
   final Affordability? affordability;

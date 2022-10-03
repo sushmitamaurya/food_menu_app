@@ -3,6 +3,8 @@ import 'package:food_menu/widgets/categories_item.dart';
 import '../dummy_data.dart';
 
 class CategoriesScreen extends StatefulWidget {
+  const CategoriesScreen({super.key});
+
   @override
   State<CategoriesScreen> createState() => _CategoriesScreen();
 }
