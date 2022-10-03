@@ -55,7 +55,7 @@ class MealDeatilScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                           vertical: 5, horizontal: 10),
-                      child: Text(selectedMeal.ingredients[index]),
+                      child: Text(selectedMeal.steps[index]),
                     ),
                   ),
                   itemCount: selectedMeal.ingredients.length,
@@ -63,9 +63,14 @@ class MealDeatilScreen extends StatelessWidget {
               ),
               buildSelectionTitle(context, 'Steps'),
               buildContainer(ListView.builder(
-                itemBuilder: (ctx, index) => ListTile(
-                  leading: CircleAvatar(child: Text('#${(index + 1)}')),
-                  title: Text(selectedMeal.steps[index]),
+                itemBuilder: (ctx, index) => Column(
+                  children: [
+                    ListTile(
+                      leading: CircleAvatar(child: Text('#${(index + 1)}')),
+                      title: Text(selectedMeal.ingredients[index]),
+                    ),
+                    Divider(),
+                  ],
                 ),
                 itemCount: selectedMeal.steps.length,
               ))
