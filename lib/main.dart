@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (ctx) => TabsScreen(),
-        CategoriesMeal.routeName: (ctx) => CategoriesMeal(),
+        CategoriesMealScreen.routeName: (ctx) => CategoriesMealScreen(),
         MealDeatilScreen.routeName: (ctx) => MealDeatilScreen(),
         //CategoriesScreen.routeName: (ctx) => CategoriesScreen(),
         FiltersScreen.routeName: (ctx) => FiltersScreen()
