@@ -15,6 +15,7 @@ class MealDeatilScreen extends StatelessWidget {
   }
 
   Widget buildContainer(Widget child) {
+    print('----MealDeatilScreens----');
     return Container(
       decoration: BoxDecoration(
           color: Colors.white,
@@ -42,8 +43,8 @@ class MealDeatilScreen extends StatelessWidget {
             Container(
               height: 300,
               width: double.infinity,
-              child: Image.network(
-                selectedMeal.imageUrl!,
+              child: Image.asset(
+                selectedMeal.imageUrl,
                 fit: BoxFit.cover,
               ),
             ),
@@ -80,7 +81,6 @@ class MealDeatilScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: Icon(
           Icons.delete,
-          color: Colors.black,
         ),
         onPressed: () {
           Navigator.of(context).pop(mealId);

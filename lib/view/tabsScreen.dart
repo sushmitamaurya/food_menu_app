@@ -25,6 +25,7 @@ class _TabsScreenState extends State<TabsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    print('----TabsScreen----');
     return Scaffold(
       drawer: MainDrawer(),
       appBar: AppBar(
