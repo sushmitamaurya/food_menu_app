@@ -18,10 +18,10 @@ class Meal {
   final int? duration;
   final Complexity? complexity;
   final Affordability? affordability;
-  final bool? isGlutenFree;
-  final bool? isLactoseFree;
-  final bool? isVegan;
-  final bool? isVegetarian;
+  final bool isGlutenFree;
+  final bool isLactoseFree;
+  final bool isVegan;
+  final bool isVegetarian;
 
   const Meal({
     required this.id,
